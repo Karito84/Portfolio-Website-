@@ -1,0 +1,87 @@
+/* Universal Styles */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: Lato, sans-serif;
+}
+
+
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 7rem;
+    align-items: center;
+    background: linear-gradient(to right, hsl(223, 24%, 31%), hsl(223, 100%, 90%));
+    padding: 0 2%;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    position:fixed;
+    width:98%;
+    top:1%;
+    left:1%;
+    text-align: center;
+}
+
+.logo-container {
+    width: 4rem ;
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+nav {
+    width: 50%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: hsl(0,0%,0%);
+}
+
+/* Introduction */
+
+.introduction {
+    width: 100%;
+    height:40rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+    background: linear-gradient(to right, hsl(223, 24%, 31%), hsl(223, 100%, 90%));
+    padding-top: 7rem;
+}
+
+.intro-text {
+    
+    font-size:4.5rem;
+    color: whitesmoke;
+    margin: 3%;
+}
+.intro-text p {
+    font-size: 3.5rem;
+}
+
+.introduction img  {
+    border-radius: 50%;
+    width:100%;
+    height: auto;
+    margin-right: 3%;
+}
