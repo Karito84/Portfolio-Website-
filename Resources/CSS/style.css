@@ -138,7 +138,7 @@ nav a {
     margin-bottom: 4rem;
     font-size: 1.35rem;
 }
-
+/* button style */
 .button-container button {
     background-color: hsl(223, 24%, 39%);
     padding:1rem 2rem;
@@ -149,3 +149,18 @@ nav a {
     cursor:pointer;
     font-family: Lato, sans-serif;
 }
+
+.button-container button:hover,
+.button-container button:focus {
+    background-color: hsl(223, 24%, 24%);
+}
+
+.button-container button:focus{
+    outline: 1px solid hsl(0,0%,96%);
+    outline-offset: -4px;
+}
+
+.button-container button:active {
+    transform: scale(0.99);
+}
+
