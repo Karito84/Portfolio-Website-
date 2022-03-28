@@ -11,7 +11,12 @@ html {
     font-family: Lato, sans-serif;
 }
 
-
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding:2rem;
+    color: hsl(223, 24%, 24%);
+}
 
 /* Header */
 
@@ -88,4 +93,59 @@ nav a {
 
 .introduction figure {
     padding-left: 4%;
+}
+
+/* About Me*/
+
+.about-content {
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me {
+    font-size: 1.15rem;
+    width: 45%;
+    height:25rem;
+    background-color: hsl(223, 24%, 39%);
+    color: hsl(0,0%,92%);
+    margin: 3% 5%;
+    border-radius: 15px;
+    padding:3rem;
+    line-height: 1.5;
+}
+
+.about-content .button-container {
+    font-size: 1.15rem;
+    width: 45%;
+    height:25rem;
+    background-color: hsl(223, 100%, 90%);
+    color: hsl(0,0%,92%);
+    margin: 3% 5%;
+    border-radius: 15px;
+    padding:3rem;
+    line-height: 1.5;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button-container p {
+    color: hsl(223, 24%, 24%);
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 1.35rem;
+}
+
+.button-container button {
+    background-color: hsl(223, 24%, 39%);
+    padding:1rem 2rem;
+    font-size: 1.35rem;
+    color: hsl(0,0%,92%);
+    border-radius: 15px;
+    border:none;
+    cursor:pointer;
+    font-family: Lato, sans-serif;
 }
