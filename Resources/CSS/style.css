@@ -18,6 +18,10 @@ h2 {
     color: hsl(223, 24%, 24%);
 }
 
+.center {
+    text-align: center;
+}
+
 /* Header */
 
 header {
@@ -33,7 +37,6 @@ header {
     position:fixed;
     top:1rem;
     left:1%;
-    text-align: center;
 }
 
 .logo-container {
@@ -104,28 +107,26 @@ nav a {
     justify-content: center;
 }
 
-.about-me {
-    font-size: 1.15rem;
-    width: 45%;
-    height:25rem;
-    background-color: hsl(223, 24%, 39%);
-    color: hsl(0,0%,92%);
-    margin: 3% 5%;
-    border-radius: 15px;
-    padding:3rem;
-    line-height: 1.5;
-}
-
+.about-me, 
 .about-content .button-container {
     font-size: 1.15rem;
     width: 45%;
     height:25rem;
-    background-color: hsl(224, 46%, 78%);
     color: hsl(0,0%,92%);
     margin: 3% 5%;
+    line-height: 1.5;
     border-radius: 15px;
     padding:3rem;
-    line-height: 1.5;
+    color: hsl(0,0%,92%);
+}
+
+.about-me {
+    background-color: hsl(223, 24%, 39%);
+    color: hsl(0,0%,92%);
+}
+
+.about-content .button-container {
+    background-color: hsl(224, 46%, 78%);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -134,7 +135,6 @@ nav a {
 
 .button-container p {
     color: hsl(223, 24%, 24%);
-    text-align: center;
     margin-bottom: 4rem;
     font-size: 1.35rem;
 }
@@ -163,4 +163,6 @@ nav a {
 .button-container button:active {
     transform: scale(0.99);
 }
+
+/* Projects */
 
