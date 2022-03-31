@@ -224,6 +224,8 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: start;
+    
 }
 
 .imgs-container figure:hover .description,
@@ -261,7 +263,7 @@ nav a {
 }
 
 .project-links a:hover {
-    color:hsl(60, 56%, 91%);
+    color:hsl(194, 100%, 85%);
 
 }
 .project-links a:active {
