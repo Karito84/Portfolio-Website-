@@ -22,6 +22,9 @@ h2 {
     text-align: center;
 }
 
+.hidden {
+    visibility:hidden;
+}
 /* Header */
 
 header {
@@ -37,6 +40,7 @@ header {
     position:fixed;
     top:1rem;
     left:1%;
+    z-index:4
 }
 
 .logo-container {
@@ -105,6 +109,7 @@ nav a {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .about-me, 
@@ -136,7 +141,7 @@ nav a {
 .button-container p {
     color: hsl(223, 24%, 24%);
     margin-bottom: 4rem;
-    font-size: 1.35rem;
+    font-size: 1.15rem;
 }
 /* button style */
 .button-container button {
@@ -166,3 +171,99 @@ nav a {
 
 /* Projects */
 
+.projects-intro {
+    font-size: 1.35rem;
+    margin: 3%;
+    padding-bottom:1%;
+}
+
+.imgs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.imgs-container figure {
+    margin: 3% 2%;
+    position: relative;
+    overflow: hidden;
+}
+
+.imgs-container figure::before {
+    content: " ";
+    z-index: 1;
+    display: block;
+    position: absolute; 
+    height: 100%;  
+    width: 100%;
+   
+}
+
+.imgs-container figure:hover::before {
+    background-color: hsla(223, 24%, 24%, 0.75);
+  
+}
+.imgs-container figure img {
+    height:100%;  
+}
+
+.imgs-container figure:hover img {
+    transform: scale(1.7);
+}
+
+.imgs-container .description {
+    position: absolute;
+    left:5%;
+    bottom: 20%;
+    color: hsl(0,0%,96%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    z-index:3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.imgs-container figure:hover .description,
+.imgs-container figure:hover .project-links 
+ {
+    visibility: visible;
+    z-index: 3;
+}
+
+.description p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+
+.description h3 {
+    margin:2rem 0;
+}
+
+.project-links {
+    display: flex;
+    position:absolute;
+    bottom: 1%;
+}
+
+.project-links a {
+    font-size: 1.15rem;
+    color:hsl(0,0%,96%);
+    margin: 2rem; 
+}
+
+.project-links a,
+.project-links a:hover,
+.project-links a:active {
+   text-decoration: none; 
+}
+
+.project-links a:hover {
+    color:hsl(60, 56%, 91%);
+
+}
+.project-links a:active {
+    color: hsl(222, 54%, 75%);
+}
