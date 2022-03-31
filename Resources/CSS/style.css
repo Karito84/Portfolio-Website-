@@ -175,6 +175,7 @@ nav a {
     font-size: 1.35rem;
     margin: 3%;
     padding-bottom:1%;
+    color: hsl(223, 24%, 24%);
 }
 
 .imgs-container {
@@ -268,4 +269,22 @@ nav a {
 }
 .project-links a:active {
     color: hsl(222, 54%, 75%);
+}
+
+/* Skills */
+
+.skills-container {
+    display:flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: 2rem auto;
+}
+
+.skills-container i {
+    font-size: 3rem;
+    color: hsl(223, 24%, 31%);
+}
+
+.skills-container p {
+    font-size: 1rem;
 }
