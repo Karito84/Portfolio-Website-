@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div>
-            <img class="myLogo" src="./Resources/Images/logo6.png" alt="personal logo">
+    <header class="center">
+        <div class="logo logo-container">
+            <img src="./Resources/Images/logo6.png" alt="personal logo">
         </div>
         <nav>
             <ul>
@@ -20,43 +20,50 @@
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#projects">Projects</a></li>
                 <li><a href="index.html#skills">Skills</a></li>
-                <li>Contact</li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="contact">
+            
             <h2>Contact Me</h2>
-            <p>Have an interesting project or job offer? I would love to hear about it!</p>
-            <p>Karolina Mueller</p>
-            <i class="fa-solid fa-envelope"><span>    karolina.hanna.mueller@gmail.com</span></i>
-            <br>
-            <i class="fa-brands fa-github"> view my GitHub</i>
-            <h2>Or just send me a message right away:</h2>
-            <form action="mailto:karolina.gawlowska@gmail.com" method="GET">
+            <div class="contact-content">
+                <p>Have an interesting project or job offer? I would love to hear about it!</p>
+                <div class="contact-options">
+                    <i class="fa-solid fa-envelope">
+                    <p>karolina.hanna.mueller@gmail.com</p></i>
+                    <i class="fa-brands fa-github"> 
+                    <p>view my GitHub</p></i>
+                </div>
+            
+                <p class="form-title">Or just send me a message here:</p>
+                <form class="contact-form" action="mailto:karolina.gawlowska@gmail.com" method="GET" >
+                    <div class="half">
                 
                 <input type="text" name="name" id="name" placeholder="Name" required>
                 
              
                 <input type="email" name="email" id="email" placeholder="Email" required>
-                <br>
+                </div>
               
                 <input type="text" name="subject" id="subject" placeholder="Subject" required>
                 <br>
                
-                <textarea name="message" id="message" rows="4" cols="20" placeholder="Message" required></textarea>
+                <textarea type="text" name="message" id="message" rows="4" cols="20" placeholder="Message" required></textarea>
                 <br>
                 <input type="submit" value="Send message!">
             </form>
-
-          
+        </div>
         </section>
+          
+       </main>
         <footer>
             <p>Karolina Mueller &copy; 2022</p>
             
     
         </footer>
-    </main>
+    
     
 </body>
 </html>
