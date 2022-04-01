@@ -31,13 +31,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position:fixed;
     height: 7rem;
     width:98%;
     background: linear-gradient(to right, hsla(223, 24%, 31%,0.85), hsl(223, 100%, 90%, 0.85));
     padding: 0 2%;
     border: 1px solid hsl(0,0%,96%);
     border-radius: 5px;
-    position:fixed;
     top:1rem;
     left:1%;
     z-index:4
@@ -70,21 +70,20 @@ nav a {
 
 /* Introduction */
 
-.introduction {
-    width: 100%;
-    height:45rem;
+.introduction  {
     display:flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height:45rem;
     background: linear-gradient(to right, hsl(223, 24%, 31%), hsl(223, 100%, 90%));
     padding-top: 8rem;
 }
 
 .intro-text {
-    
     font-size:4.5rem;
-    color: hsl(0,0%,96%);
     margin: 0 3%;
+    color: hsl(0,0%,96%);
 }
 
 .intro-text p {
@@ -92,10 +91,10 @@ nav a {
 }
 
 .introduction img  {
-    border-radius: 50%;
     width:100%;
     height: auto;
-    padding-right: 3%;
+    padding-right: 3%; 
+    border-radius: 50%;
 }
 
 .introduction figure {
@@ -105,10 +104,10 @@ nav a {
 /* About Me*/
 
 .about-content {
-    width: 98%;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 98%;
     margin: 0 auto;
 }
 
@@ -131,11 +130,11 @@ nav a {
 }
 
 .about-content .button-container {
-    background-color: hsl(224, 46%, 78%);
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: hsl(224, 46%, 78%);
 }
 
 .button-container p {
@@ -186,7 +185,6 @@ nav a {
     text-align: center;
     width:90%;
     margin: auto;
-    
 }
 
 .imgs-container figure {
@@ -202,13 +200,12 @@ nav a {
     position: absolute; 
     height: 100%;  
     width: 100%;
-   
 }
 
 .imgs-container figure:hover::before {
     background-color: hsla(223, 24%, 24%, 0.75);
-  
 }
+
 .imgs-container figure img {
     height:100%;  
 }
@@ -218,29 +215,27 @@ nav a {
 }
 
 .imgs-container .description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start; 
     position: absolute;
     left:5%;
     bottom: 20%;
     color: hsl(0,0%,96%);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     z-index:3;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: start;
-    
 }
 
 .imgs-container figure:hover .description,
-.imgs-container figure:hover .project-links 
- {
+.imgs-container figure:hover .project-links {
     visibility: visible;
     z-index: 3;
 }
 
 .description p {
-    font-size: 1.15rem;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
@@ -251,7 +246,7 @@ nav a {
 .project-links {
     display: flex;
     position:absolute;
-    bottom: 1%;
+    bottom: 0;
 }
 
 .project-links a {
@@ -286,6 +281,7 @@ nav a {
 #skills h2 {
     margin:5%;
 }
+
 .skills-container i {
     font-size: 3rem;
     color: hsl(223, 24%, 31%);
@@ -294,6 +290,99 @@ nav a {
 .skills-container p {
     font-size: 1rem;
 }
+
+/* Contact section */
+.contact {
+    width: 100%;
+    padding-top: 8rem;
+    background: linear-gradient(to right, hsl(223, 24%, 31%), hsl(223, 100%, 90%));
+}
+
+.contact h2 {
+    color: hsl(0,0%,96%);
+    margin-top: 3%;
+}
+
+.contact-content {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: hsl(0,0%,96%);
+    font-size: 1.25rem;
+}
+
+.contact-content p {
+    display:inline;
+    margin-top: 3%;
+    margin-bottom: 4%;
+    font-size: 1.4rem;
+}
+
+.form-title {
+    font-size: 1.6rem;
+}
+
+.contact-options {
+    display: flex; 
+    flex-direction: column;
+    margin-bottom:1%;
+}
+
+.contact-options p {
+    font-family: Lato, sans-serif;
+}
+.contact-options i {
+    line-height: 1.8;
+}
+
+/* Contact form*/
+.contact-form {
+    width: 60%;
+}
+
+.half {
+    display:flex;
+    justify-content: space-between;
+}
+
+#email {
+    margin-left:0.5rem;
+}
+
+#name, 
+#email {
+    width: 50%;
+    height:3rem;
+}
+
+#subject,
+#message {
+    width:100%;
+ }
+
+textarea {
+    resize: vertical;
+ }
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form textarea[type="text"],
+.contact-form input[type="submit"] {
+    padding: 1rem;
+    margin-bottom:0.5rem;
+    font-family: Lato, sans-serif;
+    font-size: 1.5rem;
+    opacity:0.6;
+    border:2px solid hsl(223, 100%, 90%);
+    box-shadow: 4px 4px 4px hsla(223, 24%, 24%, 0.6);
+}
+
+.contact-form input[type="submit"] {
+    float: right;
+    cursor: pointer;
+}
+/* footer section*/
 
 footer {
     display:flex;
