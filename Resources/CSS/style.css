@@ -22,9 +22,9 @@ h2 {
     text-align: center;
 }
 
-.hidden {
+/*.hidden {
     visibility:hidden;
-}
+}*/
 /* Header */
 
 header {
@@ -208,6 +208,7 @@ nav a {
 
 .imgs-container figure img {
     height:100%;  
+    transition: transform 0.5s ease-in-out;
 }
 
 .imgs-container figure:hover img {
@@ -220,18 +221,28 @@ nav a {
     align-items: flex-start;
     text-align: start; 
     position: absolute;
-    left:5%;
+    left:-5%;
     bottom: 20%;
     color: hsl(0,0%,96%);
     font-size: 1.3rem;
     font-weight: 700;
     z-index:3;
+    opacity: 0;
 }
 
 .imgs-container figure:hover .description,
 .imgs-container figure:hover .project-links {
-    visibility: visible;
+    opacity:1;
     z-index: 3;
+   
+}
+.imgs-container figure:hover .description {
+    transition: opacity 1s ease-in, left 0.5s ease-in;
+    left:5%;
+
+}
+.imgs-container figure:hover .project-links {
+    transition: opacity 1s ease-in 0.7s;
 }
 
 .description p {
@@ -247,6 +258,7 @@ nav a {
     display: flex;
     position:absolute;
     bottom: 0;
+    opacity: 0;
 }
 
 .project-links a {
