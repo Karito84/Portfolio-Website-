@@ -103,11 +103,21 @@ nav a:hover {
     font-size: 3.5rem;
 }
 
-.introduction img  {
+#color-pic  {
     width:100%;
     height: auto;
     padding-right: 3%; 
     border-radius: 50%;
+    cursor:pointer;
+}
+
+#no-color-pic {
+    display:none;
+    width:100%;
+    height: auto;
+    padding-right: 3%; 
+    border-radius: 50%;
+    cursor:pointer;
 }
 
 .introduction figure {
