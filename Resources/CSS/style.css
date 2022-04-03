@@ -15,6 +15,7 @@ h2 {
     text-align: center;
     font-size: 2rem;
     padding:2rem;
+    margin:2rem auto;
     color: hsl(223, 24%, 24%);
 }
 
@@ -28,11 +29,12 @@ h2 {
 /* Header */
 header {
     position:fixed;
-    background: linear-gradient(to right, hsla(223, 24%, 31%,0.95), hsl(223, 100%, 90%, 0.95));
+    background: linear-gradient(to right, hsla(223, 24%, 31%,0.90), hsl(223, 100%, 90%, 0.90));
     width:100%;
     height:8rem;
     margin: 0 auto;
-    z-index:4
+    z-index:4;
+    backdrop-filter: blur(4px);
 }
 .header-content {
     display: flex;
@@ -75,6 +77,10 @@ nav a {
     color: hsl(0,0%,0%);
 }
 
+nav a:hover {
+    color: hsl(223, 24%, 24%);
+}
+
 /* Introduction */
 
 .introduction  {
@@ -113,22 +119,30 @@ nav a {
 .about-content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 98%;
+    justify-content: space-around;
+    width: 90%;
     margin: 0 auto;
+    border: 2px dashed hsl(223, 24%, 49%);
+    border-radius: 5px;
+}
+
+.about-me-container,
+.button-container {
+    width: 45%;
+    margin: 3rem 0;
+    box-shadow: 4px 4px 12px hsla(223, 24%, 24%, 0.6);
+    border-radius: 5px;
+    
 }
 
 .about-me, 
 .about-content .button-container {
     font-size: 1.15rem;
-    width: 45%;
-    min-height:25rem;
     color: hsl(0,0%,92%);
-    margin: 3% 5%;
     line-height: 1.5;
     border-radius: 5px;
     padding:3rem;
-    color: hsl(0,0%,92%);
+    
 }
 
 .about-me {
@@ -141,7 +155,9 @@ nav a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    align-self: stretch;
     background-color: hsl(224, 46%, 78%);
+   
 }
 
 .button-container p {
@@ -160,6 +176,7 @@ nav a {
     cursor:pointer;
     font-family: Lato, sans-serif;
     transition: background-color 0.5s linear;
+    box-shadow: 4px 4px 12px hsla(223, 24%, 24%, 0.6);
 }
 
 .button-container button:hover,
@@ -180,8 +197,8 @@ nav a {
 
 .projects-intro {
     font-size: 1.35rem;
-    margin-top: 3%;
-    margin-bottom: 5%;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
     padding-bottom:1%;
     color: hsl(223, 24%, 24%);
 }
@@ -193,12 +210,16 @@ nav a {
     text-align: center;
     width:90%;
     margin: auto;
+    border: 2px dashed hsl(223, 24%, 49%);
+    border-radius: 5px;
 }
 
 .imgs-container figure {
-    margin: 3% 1%;
+    margin: 3rem 1rem;
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 4px 4px 12px hsla(223, 24%, 24%, 0.6);
 }
 
 .imgs-container figure::before {
@@ -208,6 +229,7 @@ nav a {
     position: absolute; 
     height: 100%;  
     width: 100%;
+    transition: background-color 0.8s ease-out;
 }
 
 .imgs-container figure:hover::before {
@@ -295,11 +317,7 @@ nav a {
     display:flex;
     justify-content: space-around;
     width: 60%;
-    margin: 2% auto 10%;
-}
-
-#skills h2 {
-    margin:5%;
+    margin: 3rem auto 6rem;
 }
 
 .skills-container i {
@@ -410,7 +428,7 @@ footer {
     align-items: center;
     width: 100%;
     height:7rem;
-    padding: 0 2%;
+    padding: 0 2rem;
     color: hsl(0,0%,96%);
     background: linear-gradient(to right, hsl(223, 24%, 31%), hsl(223, 100%, 90%));
     font-size: 1.5rem;
