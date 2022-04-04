@@ -170,11 +170,28 @@ nav a:hover {
    
 }
 
-.button-container p {
+#question {
     color: hsl(223, 24%, 24%);
     margin-bottom: 4rem;
     font-size: 1.15rem;
+    min-height: 3.5rem;
+    /*display:none;*/
 }
+
+#polishWord-container {
+display:none;
+}
+
+#polishWord { 
+    color: hsl(223, 24%, 24%);
+    font-size:1.15rem;
+    font-weight: 700;
+    background-color: hsla(0,0%,92%, 0.4);
+    border-radius: 5px;
+    padding: 2rem;
+    margin: 1rem;
+}
+
 /* button style */
 .button-container button {
     background-color: hsl(223, 24%, 39%);
@@ -189,19 +206,22 @@ nav a:hover {
     box-shadow: 4px 4px 12px hsla(223, 24%, 24%, 0.6);
 }
 
-.button-container button:hover,
-.button-container button:focus {
+.button-container button:hover
+/*,.button-container button:focus*/ {
     background-color: hsl(223, 24%, 24%);
-}
-
-.button-container button:focus{
     outline: 1px solid hsl(0,0%,96%);
     outline-offset: -4px;
 }
 
+/*.button-container button:focus{
+    outline: 1px solid hsl(0,0%,96%);
+    outline-offset: -4px;
+}*/
+
 .button-container button:active {
     transform: scale(0.99);
 }
+
 
 /* Projects */
 
