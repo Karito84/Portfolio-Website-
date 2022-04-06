@@ -9,6 +9,7 @@
 html {
     font-size: 16px;
     font-family: Lato, sans-serif;
+    color: hsl(223, 24%, 24%);
 }
 
 h2 {
@@ -74,11 +75,12 @@ nav ul {
 nav a {
     text-decoration: none;
     font-size: 1.5rem;
-    color: hsl(0,0%,0%);
+    color: hsl(223, 24%, 24%);
+    font-weight: 700;
 }
 
 nav a:hover {
-    color: hsl(223, 24%, 24%);
+    color: hsl(194, 100%, 70%);
 }
 
 /* Introduction */
@@ -334,7 +336,7 @@ display:none;
 }
 
 .project-links a:hover {
-    color:hsl(194, 100%, 85%);
+    color:hsl(194, 100%, 70%);
 
 }
 .project-links a:active {
