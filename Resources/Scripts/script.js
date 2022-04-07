@@ -23,7 +23,7 @@ noColorPic.addEventListener('mouseout', changePicToColor);
 let words = ['Cześć (pron: cheshch) ---> Hi / Bye ', 'Do widzenia (pron: doh-veadsen-ya) ---> Good - bye',
             'Mądry (pron: mondri) ---> Smart','Wesoły (pron: vesowi) ---> Happy', 'Tani (pron: tani) ---> Cheap',
             'Ładny (pron: wadni) ---> Pretty', 'Ćśś! Cicho! (pron: Chshh! (chee-hoe!) ---> Shh! Be quiet!',
-            'Nie (pron: nyeh) ---> No','Drogi (pron: drogi) ---> Expensive', 'Dzień dobry (pron: Jen doh-bri) ---> Hello',
+            'Nie (pron: nyeh) ---> No','Drogi (pron: drogi) ---> Expensive', 'Dzień dobry (pron: jen doh-bri) ---> Hello',
             'Na zdrowie! (pron: nah zdrovyeh!) ---> Cheers!','Dobranoc (pron: doh-brah-noats) ---> Good Night',
             'Dzień (pron: jen) ---> Day', 'Dziękuję (pron: jen-koo-yeh) ---> Thank you','Głodny (pron: gwodni) ---> Hungry',
             'No (pron: nohe) ---> Okay :)','Proszę (pron: prosheh) ---> Please','Tak (pron: tak) ---> Yes',
