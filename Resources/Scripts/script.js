@@ -57,3 +57,104 @@ const displayWord = () => {
 
 
 button.addEventListener('click', displayWord);
+
+// make the slider for color switch work
+
+let rangeButton = document.querySelector('.sliderContainer input[type="range"]');
+let header = document.querySelector("header");
+let myLogo = document.getElementById("logo");
+let navLinks = document.querySelectorAll(".nav li a");
+let headingElements = document.querySelectorAll("h2");
+let intro = document.getElementById("intro");
+let projectsIntroTxt = document.querySelector(".projects-intro")
+let skillsIcons = document.querySelectorAll(".skills-container i")
+let footer = document.querySelector("footer");
+
+
+function addColorToLink(event) {
+    
+    event.target.style.color = "hsl(194, 100%, 70%)";
+}
+
+function removeColorFromLink(event) {
+    
+    event.target.style.color ="hsl(0,0%,96%)";
+}
+
+
+let toggle = false;
+
+function colorChange() {
+    //dark mode
+    if (toggle === false) {
+
+       myLogo.src = "./Resources/Images/logo6-white.png";
+        
+        // change clors of all h2 elements
+        for (let i = 0; i < headingElements.length; i++) {
+            headingElements[i].style.color = "hsl(0,0%,96%)";
+        }
+        // change colors of all nav links
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].style.color = "hsl(0,0%,96%)";
+        }
+        // set 'hover' states for links
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].addEventListener('mouseover',addColorToLink);
+            navLinks[i].addEventListener('mouseout',removeColorFromLink);  
+        }
+        // change background of the introduction section
+        intro.style.background = "hsl(223,24%,31%)";
+        projectsIntroTxt.style.color = "hsl(0,0%,96%)";
+        // chonge colors of skills icons
+        for(let i = 0; i < skillsIcons.length; i++) {
+            skillsIcons[i].style.color = "hsl(0,0%,96%)";
+        }
+        
+    } else { // light mode
+        
+        myLogo.src = "./Resources/Images/logo6.png";
+        
+    
+        for (let i = 0; i < headingElements.length; i++) {
+            headingElements[i].style.color = "";
+        }
+      
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].style.color = "";
+        }
+
+        for (let i = 0; i < navLinks.length; i++) {
+            navLinks[i].removeEventListener('mouseover',addColorToLink);
+            navLinks[i].removeEventListener('mouseout',removeColorFromLink);
+        } 
+
+        intro.style.background = "";
+        projectsIntroTxt.style.color = "";
+
+        for(let i = 0; i < skillsIcons.length; i++) {
+            skillsIcons[i].style.color = "";
+        }
+
+
+    }
+
+    toggle = !toggle;  
+    }
+
+ 
+
+
+// function to add class "light" to some elements using toggle switch
+const darkMode = () => {
+  
+    
+    header.classList.toggle("light");
+    document.body.classList.toggle("light");
+    footer.classList.toggle("light");
+   
+}
+
+
+rangeButton.addEventListener('click', darkMode);
+rangeButton.addEventListener('click', colorChange);
