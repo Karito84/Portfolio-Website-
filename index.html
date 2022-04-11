@@ -14,7 +14,7 @@
         <header>
             <div class="center header-content">
                 <div class="logo logo-container">
-                    <img src="./Resources/Images/logo6.png" alt="personal logo">
+                    <img src="./Resources/Images/logo6.png" alt="personal logo" id="logo">
                 </div>
                 <nav>
                     <ul class="nav">
@@ -28,7 +28,7 @@
             </div>
         </header>
         <main>
-        <section class="introduction">
+        <section class="introduction" id="intro">
             <div class="intro-text">
             <h1>Hi, 
             <br>I am Karolina,
@@ -40,11 +40,17 @@
                 <img src="./Resources/Images/profile pic banner black-white.jpeg" alt="Picture of Karolina" id="no-color-pic">
             </figure>
         </section>
+        <section class="color-change-mode">
+        <i class="center fa-solid fa-paint-roller"></i>
+        <div class=" center sliderContainer">    
+            <input type="range" id="range" min = 1 max = 2 value="1"class="slider">
+        </div>
+        </section>
         <section id="about">
             <h2>About Me</h2>
             <div class="about-content">
                 <div class="about-me-container">
-                    <p class="about-me" style = "text-indent: 0.9rem"> My name is Karolina Mueller. I am originally from Poland but I moved to USA in 2008
+                    <p class="about-me" id="about-me" style = "text-indent: 0.9rem"> My name is Karolina Mueller. I am originally from Poland but I moved to USA in 2008
                 after graduating Poznan University of Economics. Currently I am a stay at home mom, but 
                 in my free time I have been studying programming with Codecademy. 
                 Currently I am learning Front-End Engineer career path and after finishing it I plan to 
