@@ -8,15 +8,16 @@
     <script src="https://kit.fontawesome.com/eb367b03ef.js" crossorigin="anonymous"></script>
     <link href="./Resources/CSS/style.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <header>
         <div class="center header-content">
             <div class="logo logo-container">
-                <img src="./Resources/Images/logo6.png" alt="personal logo">
+                <img src="./Resources/Images/logo6.png" alt="personal logo" id="logo">
             </div>
             <nav>
-                <ul>
+                <ul class="nav">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#projects">Projects</a></li>
@@ -27,8 +28,14 @@
         </div>
     </header>
     <main>
-        <section class="contact">
-            
+       
+        <section class="contact" id="contact">
+            <section class="color-change-mode">
+                <i class="center fa-solid fa-paint-roller"></i>
+                <div class=" center sliderContainer">    
+                    <input type="range" id="range" min = 1 max = 2 value="1"class="slider">
+                </div>
+            </section>
             <h2>Contact Me</h2>
             <div class="contact-content">
                 <p>Have an interesting project or job offer? I would love to hear about it!</p>
@@ -65,7 +72,74 @@
             
     
         </footer>
+        
+        <script>
+            let rangeButton = document.querySelector('.sliderContainer input[type="range"]');
+            let header = document.querySelector("header");
+            let myLogo = document.getElementById("logo");
+            let footer = document.querySelector("footer");
+            let navLinks = document.querySelectorAll(".nav li a");
+            let contact = document.getElementById("contact");
+            
+            
+            function addColorToLink(event) {
     
+             event.target.style.color = "hsl(194, 100%, 70%)";
+            }
+
+            function removeColorFromLink(event) {
+    
+            event.target.style.color ="hsl(0,0%,96%)";
+            }
+            
+            
+            let toggle = false;
+
+            function colorChange() {
+    
+                if (toggle === false) {
+
+                    myLogo.src = "./Resources/Images/logo6-white.png";
+                    for (let i = 0; i < navLinks.length; i++) {
+                        navLinks[i].style.color = "hsl(0,0%,96%)";
+                    }
+
+                    for (let i = 0; i < navLinks.length; i++) {
+                        navLinks[i].addEventListener('mouseover',addColorToLink);
+                        navLinks[i].addEventListener('mouseout',removeColorFromLink);  
+                    }
+
+                    contact.style.background = "hsl(223,24%,31%)";
+
+                } else {
+        
+                    myLogo.src = "./Resources/Images/logo6.png";
+                    for (let i = 0; i < navLinks.length; i++) {
+                        navLinks[i].style.color = "";
+                    }
+
+                    for (let i = 0; i < navLinks.length; i++) {
+                        navLinks[i].removeEventListener('mouseover',addColorToLink);
+                        navLinks[i].removeEventListener('mouseout',removeColorFromLink);
+                    } 
+
+                    contact.style.background = "";
+                    
+
+                }
+            toggle = !toggle;
+            }
+
+            const darkMode = () => {
+                header.classList.toggle("light");
+                document.body.classList.toggle("light");
+                footer.classList.toggle("light");
+            }
+
+            rangeButton.addEventListener('click', colorChange);
+            rangeButton.addEventListener('click', darkMode);
+             
+        </script>
     
 </body>
 </html>
