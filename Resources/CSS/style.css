@@ -24,9 +24,14 @@ h2 {
     text-align: center;
 }
 
-/*.hidden {
-    visibility:hidden;
-}*/
+.light {
+    background-image: none;
+    background-color:black;
+    color:white;
+}
+
+
+
 /* Header */
 header {
     position:fixed;
@@ -126,6 +131,48 @@ nav a:hover {
     padding-left: 4%;
 }
 
+/* Color switch*/
+
+.fa-paint-roller {
+    margin:2rem auto 1rem;
+    width:100%;
+}
+
+.sliderContainer {
+    width:100%;
+
+}
+.slider {
+    -webkit-appearance: none;
+    width: 60px;
+    height: 20px;
+    background: hsl(0,0%,96%);
+    border: 2px solid hsl(223, 24%, 49%);
+    border-radius:5px;
+    -webkit-transition: .2s;
+    transition: border-color .2s;
+  }
+.slider:hover {
+    border-color: hsl(194, 100%, 70%);
+  }
+
+  .sliderContainer input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 16px;
+    background: hsl(223, 24%, 49%);
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .sliderContainer input[type=range]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+   
+
+  }
 /* About Me*/
 
 .about-content {
