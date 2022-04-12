@@ -82,6 +82,7 @@ nav a {
     font-size: 1.5rem;
     color: hsl(223, 24%, 24%);
     font-weight: 700;
+    transition: color .15s ease-out;
 }
 
 nav a:hover {
@@ -150,7 +151,7 @@ nav a:hover {
     border: 2px solid hsl(223, 24%, 49%);
     border-radius:5px;
     -webkit-transition: .2s;
-    transition: border-color .2s;
+    transition: border-color 0.3s;
   }
 .slider:hover {
     border-color: hsl(194, 100%, 70%);
