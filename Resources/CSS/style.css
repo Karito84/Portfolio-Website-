@@ -115,18 +115,20 @@ nav a:hover {
 #color-pic  {
     width:100%;
     height: auto;
-    padding-right: 3%; 
+    
     border-radius: 50%;
     cursor:pointer;
+    border: 3px solid transparent;
 }
 
 #no-color-pic {
     display:none;
     width:100%;
     height: auto;
-    padding-right: 3%; 
+    
     border-radius: 50%;
     cursor:pointer;
+    border: 3px dotted hsl(194, 100%, 70%);
 }
 
 .introduction figure {
@@ -527,13 +529,13 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1100px), (orientation:landscape) {
+@media only screen and (max-width: 1100px) {
 .intro-text {
     font-size: 3.5rem;
 }
 }  
  
-@media only screen and (max-width: 988px), (orientation:landscape) {
+@media only screen and (max-width: 988px) {
     .intro-text {
         font-size: 3rem;
     }
