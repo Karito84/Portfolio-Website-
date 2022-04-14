@@ -160,10 +160,10 @@ nav a {
     font-size: 3.5rem;
 }
 
-#color-pic  {
+#color-pic, 
+#no-color-pic  {
     width:100%;
     height: auto;
-    
     border-radius: 50%;
     cursor:pointer;
     border: 3px solid transparent;
@@ -171,11 +171,6 @@ nav a {
 
 #no-color-pic {
     display:none;
-    width:100%;
-    height: auto;
-    
-    border-radius: 50%;
-    cursor:pointer;
     border: 3px dotted hsl(194, 100%, 70%);
 }
 
@@ -601,10 +596,100 @@ footer {
         display: none;
     }
 
+    .intro-text {
+        font-size: 2.5rem;
+    }
+
     header .mobile-nav {
         display:block;
     }
 
-   
+    .about-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-me-container,
+    .button-container {
+    width: 90%;
+    }
+
+    .about-content .button-container {
+        align-self: center;
+    }
     
+    .imgs-container figure img {
+        height:100%; 
+        width:100%; 
+        transition: transform 0.5s ease-in-out;
+}
+}
+@media only screen and (max-width: 650px) {
+
+    .mobile-nav ul {
+        height: 45rem;
+    }
+    .introduction {
+        height: 45rem;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .intro-text {
+        font-size: 2rem;
+    }
+
+    .introduction figure {
+        text-align: center;
+    }
+
+    #color-pic, 
+    #no-color-pic {
+        margin: auto;
+        width: 70%;
+    }
+
+    .about-me-container, 
+    .button-container {
+        width: 98%;
+       
+    }
+
+    .about-me, 
+    .about-content .button-container {
+        font-size: 1.35rem;
+        padding: 0.5rem;
+      
+    }
+    
+    .about-content {
+        border:none;
+    }
+
+    .button-container button {
+        margin-bottom: 1rem;
+    }
+
+    .projects-intro {
+        margin: 3rem 1rem 2rem;
+    }
+    .imgs-container {
+        border: none;
+        width: 98%;
+}
+
+.skills-container {
+    justify-content: space-between;
+    width: 80%;
+}
+
+.skills-container i {
+    font-size: 1.5rem;
+}
+
+footer {
+    font-size: 1rem;;
+}
+
+
 }
