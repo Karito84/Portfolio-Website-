@@ -187,4 +187,4 @@ menuItems.forEach(
     function(menuItem) { 
       menuItem.addEventListener("click", toggleMenu);
     }
-  )
+  );

@@ -16,8 +16,8 @@
             <div class="logo logo-container">
                 <img src="./Resources/Images/logo6.png" alt="personal logo" id="logo">
             </div>
-            <nav>
-                <ul class="nav">
+            <nav class="desktop-nav">
+                <ul class="nav-menu">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#projects">Projects</a></li>
@@ -25,6 +25,18 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <nav class="mobile-nav">
+                <ul class="nav-menu">
+                    <li><a class="menu-item" href="./index.html">Home</a></li>
+                    <li><a class="menu-item" href="index.html#about">About</a></li>
+                    <li><a class="menu-item" href="index.html#projects">Projects</a></li>
+                    <li><a class="menu-item" href="index.html#skills">Skills</a></li>
+                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+                </ul>
+                <button class="hamburger">          
+                    <i class="fa-solid fa-bars menuIcon"></i>
+                    <i class="fa-solid fa-xmark closeIcon"></i>
+                </button>
         </div>
     </header>
     <main>
@@ -41,9 +53,9 @@
                 <p>Have an interesting project or job offer? I would love to hear about it!</p>
                 <div class="contact-options">
                     <i class="fa-solid fa-envelope">
-                    <p>karolina.hanna.mueller@gmail.com</p></i>
+                    <p class="icon-description">karolina.hanna.mueller@gmail.com</p></i>
                     <i class="fa-brands fa-github"> 
-                    <p>view my GitHub</p></i>
+                    <p class="icon-description">view my GitHub</p></i>
                 </div>
             
                 <p class="form-title">Or just send me a message here:</p>
@@ -138,6 +150,35 @@
 
             rangeButton.addEventListener('click', colorChange);
             rangeButton.addEventListener('click', darkMode);
+
+            // toggle for hamburger menu
+
+let menu = document.querySelector(".mobile-nav ul");
+let menuItems = document.querySelectorAll(".menu-item");
+let hamburger= document.querySelector(".hamburger");
+let closeIcon= document.querySelector(".closeIcon");
+let menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+
+    if(menu.classList.contains("showMenu")) {
+        menu.classList.remove("showMenu");
+        closeIcon.style.display = "none";
+        menuIcon.style.display = "block";
+    } else {
+        menu.classList.add("showMenu");
+        menuIcon.style.display = "none";
+        closeIcon.style.display = "block";
+    }
+}
+hamburger.addEventListener("click", toggleMenu);
+// hiding the menu after a link is clicked 
+// using toggleMenu() because when you can click it means that the menu is showing
+menuItems.forEach( 
+    function(menuItem) { 
+      menuItem.addEventListener("click", toggleMenu);
+    }
+  );
              
         </script>
     

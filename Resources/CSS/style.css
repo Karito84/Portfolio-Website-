@@ -111,7 +111,7 @@ header .mobile-nav {
 .mobile-nav ul {
     position: fixed;
     transform: translateY(-100%);
-    transition: transform 0.8s;
+    transition: transform 0.5s;
     top: 0;
     right: 0;
     left: 0;
@@ -125,6 +125,7 @@ header .mobile-nav {
     background: linear-gradient(to right, hsl(223, 24%, 31%), hsl(223, 100%, 90%));
     height:40rem;
 }
+
 .showMenu {
     transform:translateY(0) !important;
   }
@@ -589,8 +590,12 @@ footer {
     .introduction figure {
         padding: 1% 4%;
     }
+    .contact-form {
+        width: 70%;
+    }
 }
 
+/* Mobile styles*/
 @media only screen and (max-width: 768px) {
     header .desktop-nav {
         display: none;
@@ -622,6 +627,10 @@ footer {
         height:100%; 
         width:100%; 
         transition: transform 0.5s ease-in-out;
+}
+
+.contact-form {
+    width: 90%;
 }
 }
 @media only screen and (max-width: 650px) {
@@ -687,9 +696,35 @@ footer {
     font-size: 1.5rem;
 }
 
+.contact-content p {
+    margin: 3% 2% 4%;
+    text-align: center;
+   
+}
+
+.contact-options {
+    
+    width: 90%;
+}
+
+.contact-form {
+    width: 90%;
+}
+
+
 footer {
     font-size: 1rem;;
 }
 
 
+}
+@media only screen and (max-width: 336px) {
+    .contact-content .icon-description {
+        font-size: 12px;
+    }
+
+    .contact-content p {
+       
+        font-size: 1.2rem;
+    }
 }
