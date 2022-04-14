@@ -63,7 +63,7 @@ button.addEventListener('click', displayWord);
 let rangeButton = document.querySelector('.sliderContainer input[type="range"]');
 let header = document.querySelector("header");
 let myLogo = document.getElementById("logo");
-let navLinks = document.querySelectorAll(".nav li a");
+let navLinks = document.querySelectorAll(".nav-menu li a");
 let headingElements = document.querySelectorAll("h2");
 let intro = document.getElementById("intro");
 let projectsIntroTxt = document.querySelector(".projects-intro")
@@ -158,3 +158,33 @@ const darkMode = () => {
 
 rangeButton.addEventListener('click', darkMode);
 rangeButton.addEventListener('click', colorChange);
+
+
+// toggle for hamburger menu
+
+let menu = document.querySelector(".mobile-nav ul");
+let menuItems = document.querySelectorAll(".menu-item");
+let hamburger= document.querySelector(".hamburger");
+let closeIcon= document.querySelector(".closeIcon");
+let menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+
+    if(menu.classList.contains("showMenu")) {
+        menu.classList.remove("showMenu");
+        closeIcon.style.display = "none";
+        menuIcon.style.display = "block";
+    } else {
+        menu.classList.add("showMenu");
+        menuIcon.style.display = "none";
+        closeIcon.style.display = "block";
+    }
+}
+hamburger.addEventListener("click", toggleMenu);
+// hiding the menu after a link is clicked 
+// using toggleMenu() because when you can click it means that the menu is showing
+menuItems.forEach( 
+    function(menuItem) { 
+      menuItem.addEventListener("click", toggleMenu);
+    }
+  )
