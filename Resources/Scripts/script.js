@@ -110,6 +110,9 @@ function colorChange() {
         for(let i = 0; i < skillsIcons.length; i++) {
             skillsIcons[i].style.color = "hsl(0,0%,96%)";
         }
+        menuIcon.style.color = "hsl(0,0%,96%)";
+        closeIcon.style.color = "hsl(0,0%,96%)";
+        menu.style.background = "hsl(0,0%,5%)";
         
     } else { // light mode
         
@@ -135,7 +138,9 @@ function colorChange() {
         for(let i = 0; i < skillsIcons.length; i++) {
             skillsIcons[i].style.color = "";
         }
-
+        menuIcon.style.color = "";
+        closeIcon.style.color = "";
+        menu.style.background = "";
 
     }
 
