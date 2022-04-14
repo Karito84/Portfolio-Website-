@@ -54,8 +54,6 @@ header {
     position: relative;
     left:1%;
     top:1rem;
-    
-    
 }
 
 .logo-container {
@@ -68,10 +66,10 @@ header {
     overflow: hidden;
 }
 
-nav {
+.desktop-nav {
     width: 50%;
 }
-nav ul {
+.desktop-nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -88,6 +86,56 @@ nav a {
 nav a:hover {
     color: hsl(194, 100%, 70%);
 }
+
+header .mobile-nav {
+    display: none;
+}
+/* styles for the mobile menu*/
+
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 30%;
+    right: 3%;
+    padding: 4px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.hamburger i {
+    font-size: 2.5rem;
+    color: hsl(223, 24%, 24%);
+}
+
+.mobile-nav ul {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.8s;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none; 
+    padding: 5rem;
+    z-index: 99;
+    background: linear-gradient(to right, hsl(223, 24%, 31%), hsl(223, 100%, 90%));
+    height:40rem;
+}
+.showMenu {
+    transform:translateY(0) !important;
+  }
+
+.hamburger .closeIcon {
+    display: none;
+}
+nav a {
+    color:hsl(0,0%,96%)
+}
+
 
 /* Introduction */
 
@@ -542,4 +590,21 @@ footer {
     .intro-text p {
         font-size: 2.5rem;
     }
+
+    .introduction figure {
+        padding: 1% 4%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header .desktop-nav {
+        display: none;
+    }
+
+    header .mobile-nav {
+        display:block;
+    }
+
+   
+    
 }
