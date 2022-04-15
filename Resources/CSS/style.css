@@ -48,6 +48,7 @@ header {
     margin: 0 auto;
     z-index:4;
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .header-content {
@@ -97,7 +98,7 @@ header .mobile-nav {
 /* styles for the mobile menu*/
 
 .hamburger {
-    position: fixed;
+    position: absolute;
     z-index: 6;
     top: 30%;
     right: 3%;
@@ -201,7 +202,7 @@ nav a {
     background: hsl(0,0%,96%);
     border: 2px solid hsl(223, 24%, 49%);
     border-radius:5px;
-    -webkit-transition: .2s;
+    -webkit-transition: border-color 0.3s;
     transition: border-color 0.3s;
   }
 .slider:hover {
@@ -297,7 +298,7 @@ nav a {
     padding:1rem 2rem;
     font-size: 1.35rem;
     color: hsl(0,0%,92%);
-    border-radius: 15px;
+    border-radius: 5px;
     border:none;
     cursor:pointer;
     font-family: Lato, sans-serif;
@@ -309,6 +310,7 @@ nav a {
     background-color: hsl(223, 24%, 24%);
     outline: 1px solid hsl(0,0%,96%);
     outline-offset: -4px;
+    
 }
 
 .button-container button:active {
@@ -628,6 +630,7 @@ footer {
 
     .about-content .button-container {
         align-self: center;
+        min-height: 25rem;
     }
     
     .imgs-container figure img {
@@ -675,7 +678,7 @@ footer {
     .about-me, 
     .about-content .button-container {
         font-size: 1.35rem;
-        padding: 0.5rem;
+        padding: 2rem 1rem;
     }
     
     .about-content {
@@ -693,6 +696,18 @@ footer {
     .imgs-container {
         border: none;
         width: 98%;
+    }
+
+    .imgs-container .description {
+        font-size: 1.1rem;
+    }
+
+    .imgs-container figure:hover .project-links {
+        left: 5%;
+    }
+
+    .project-links a {
+        margin: 1rem 1rem 2rem 0rem;
     }
 
     .skills-container {
