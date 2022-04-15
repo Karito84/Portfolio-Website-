@@ -700,6 +700,7 @@ footer {
 
     .imgs-container .description {
         font-size: 1.1rem;
+        margin-bottom: 2rem;
     }
 
     .imgs-container figure:hover .project-links {
