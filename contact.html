@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-    <script src="https://kit.fontawesome.com/eb367b03ef.js" crossorigin="anonymous"></script>
-    <link href="./Resources/CSS/style.css" type="text/css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Website</title>
+        <script src="https://kit.fontawesome.com/eb367b03ef.js" crossorigin="anonymous"></script>
+        <link href="./Resources/CSS/style.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
-</head>
-<body>
+    </head>
+    <body>
     <header>
         <div class="center header-content">
             <div class="logo logo-container">
@@ -52,141 +52,133 @@
             <div class="contact-content">
                 <p>Have an interesting project or job offer? I would love to hear about it!</p>
                 <div class="contact-options">
-                    <i class="fa-solid fa-envelope">
-                    <p class="icon-description">karolina.hanna.mueller@gmail.com</p></i>
-                    <i class="fa-brands fa-github"> 
-                    <p class="icon-description">view my GitHub</p></i>
+                    <a class="icon-description" href="mailto:karolina.gawlowska@gmail.com"><i class="fa-solid fa-envelope"></i> karolina.hanna.mueller@gmail.com</a>
+                    <a class="icon-description" href="https://github.com/Karito84"><i class="fa-brands fa-github"></i>view my GitHub</a> 
                 </div>
             
                 <p class="form-title">Or just send me a message here:</p>
                 <form class="contact-form" action="mailto:karolina.gawlowska@gmail.com" method="GET" >
                     <div class="half">
-                
-                <input type="text" name="name" id="name" placeholder="Name" required>
-                
-             
-                <input type="email" name="email" id="email" placeholder="Email" required>
-                </div>
+                        <input type="text" name="name" id="name" placeholder="Name" required>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
               
-                <input type="text" name="subject" id="subject" placeholder="Subject" required>
-                <br>
+                    <input type="text" name="subject" id="subject" placeholder="Subject" required>
+                    <br>
                
-                <textarea type="text" name="message" id="message" rows="4" cols="20" placeholder="Message" required></textarea>
-                <br>
-                <input type="submit" value="Send message!">
-            </form>
-        </div>
+                    <textarea type="text" name="message" id="message" rows="4" cols="20" placeholder="Message" required></textarea>
+                    <br>
+                    <input type="submit" value="Send message!">
+                </form>
+            </div>
         </section>
           
-       </main>
-        <footer>
-            <p>Karolina Mueller &copy; 2022</p>
-            
-    
-        </footer>
+    </main>
+    <footer>
+        <p>Karolina Mueller &copy; 2022</p>
+     </footer>
         
-        <script>
-            let rangeButton = document.querySelector('.sliderContainer input[type="range"]');
-            let header = document.querySelector("header");
-            let myLogo = document.getElementById("logo");
-            let footer = document.querySelector("footer");
-            let navLinks = document.querySelectorAll(".nav li a");
-            let contact = document.getElementById("contact");
+    <script>
+        let rangeButton = document.querySelector('.sliderContainer input[type="range"]');
+        let header = document.querySelector("header");
+        let myLogo = document.getElementById("logo");
+        let footer = document.querySelector("footer");            
+        let navLinks = document.querySelectorAll(".nav li a");
+        let contact = document.getElementById("contact");
             
             
-            function addColorToLink(event) {
+        function addColorToLink(event) {
     
-             event.target.style.color = "hsl(194, 100%, 70%)";
-            }
+            event.target.style.color = "hsl(194, 100%, 70%)";
+        }
 
-            function removeColorFromLink(event) {
+        function removeColorFromLink(event) {
     
             event.target.style.color ="hsl(0,0%,96%)";
-            }
+        }
             
             
-            let toggle = false;
+        let toggle = false;
 
-            function colorChange() {
+        function colorChange() {
     
-                if (toggle === false) {
+            if (toggle === false) {
 
-                    myLogo.src = "./Resources/Images/logo6-white.png";
-                    for (let i = 0; i < navLinks.length; i++) {
-                        navLinks[i].style.color = "hsl(0,0%,96%)";
-                    }
+                myLogo.src = "./Resources/Images/logo6-white.png";
+                for (let i = 0; i < navLinks.length; i++) {
+                    navLinks[i].style.color = "hsl(0,0%,96%)";
+                }
 
-                    for (let i = 0; i < navLinks.length; i++) {
-                        navLinks[i].addEventListener('mouseover',addColorToLink);
-                        navLinks[i].addEventListener('mouseout',removeColorFromLink);  
-                    }
+                for (let i = 0; i < navLinks.length; i++) {
+                    navLinks[i].addEventListener('mouseover',addColorToLink);
+                    navLinks[i].addEventListener('mouseout',removeColorFromLink);  
+                }
 
-                    contact.style.background = "hsl(223,24%,31%)";
-                    menuIcon.style.color = "hsl(0,0%,96%)";
-                    closeIcon.style.color = "hsl(0,0%,96%)";
-                    menu.style.background = "hsl(0,0%,5%)";
+                contact.style.background = "hsl(223,24%,31%)";
+                menuIcon.style.color = "hsl(0,0%,96%)";
+                closeIcon.style.color = "hsl(0,0%,96%)";
+                menu.style.background = "hsl(0,0%,5%)";
 
-                } else {
+            } else {
         
-                    myLogo.src = "./Resources/Images/logo6.png";
-                    for (let i = 0; i < navLinks.length; i++) {
-                        navLinks[i].style.color = "";
-                    }
+                myLogo.src = "./Resources/Images/logo6.png";
+                for (let i = 0; i < navLinks.length; i++) {
+                    navLinks[i].style.color = "";
+                }
 
-                    for (let i = 0; i < navLinks.length; i++) {
-                        navLinks[i].removeEventListener('mouseover',addColorToLink);
-                        navLinks[i].removeEventListener('mouseout',removeColorFromLink);
-                    } 
+                for (let i = 0; i < navLinks.length; i++) {
+                    navLinks[i].removeEventListener('mouseover',addColorToLink);
+                    navLinks[i].removeEventListener('mouseout',removeColorFromLink);
+                } 
 
-                    contact.style.background = "";
-                    menuIcon.style.color = "";
-                    closeIcon.style.color = "";
-                    menu.style.background = "";
+                contact.style.background = "";
+                menuIcon.style.color = "";
+                closeIcon.style.color = "";
+                menu.style.background = "";
                     
 
-                }
+            }
+            
             toggle = !toggle;
-            }
+        }
 
-            const darkMode = () => {
-                header.classList.toggle("light");
-                document.body.classList.toggle("light");
-                footer.classList.toggle("light");
-            }
+        const darkMode = () => {
+            header.classList.toggle("light");
+            document.body.classList.toggle("light");
+            footer.classList.toggle("light");
+         }
 
             rangeButton.addEventListener('click', colorChange);
             rangeButton.addEventListener('click', darkMode);
 
-            // toggle for hamburger menu
+        // toggle for hamburger menu
 
-let menu = document.querySelector(".mobile-nav ul");
-let menuItems = document.querySelectorAll(".menu-item");
-let hamburger= document.querySelector(".hamburger");
-let closeIcon= document.querySelector(".closeIcon");
-let menuIcon = document.querySelector(".menuIcon");
+        let menu = document.querySelector(".mobile-nav ul");
+        let menuItems = document.querySelectorAll(".menu-item");
+        let hamburger= document.querySelector(".hamburger");
+        let closeIcon= document.querySelector(".closeIcon");
+        let menuIcon = document.querySelector(".menuIcon");
 
-function toggleMenu() {
+        function toggleMenu() {
 
-    if(menu.classList.contains("showMenu")) {
-        menu.classList.remove("showMenu");
-        closeIcon.style.display = "none";
-        menuIcon.style.display = "block";
-    } else {
-        menu.classList.add("showMenu");
-        menuIcon.style.display = "none";
-        closeIcon.style.display = "block";
-    }
-}
-hamburger.addEventListener("click", toggleMenu);
-// hiding the menu after a link is clicked 
-// using toggleMenu() because when you can click it means that the menu is showing
-menuItems.forEach( 
-    function(menuItem) { 
-      menuItem.addEventListener("click", toggleMenu);
-    }
-  );
+            if(menu.classList.contains("showMenu")) {
+                menu.classList.remove("showMenu");
+                closeIcon.style.display = "none";
+                menuIcon.style.display = "block";
+            } else {
+                menu.classList.add("showMenu");
+                menuIcon.style.display = "none";
+                closeIcon.style.display = "block";
+        }
+        }
+        hamburger.addEventListener("click", toggleMenu);
+        // hiding the menu after a link is clicked 
+        // using toggleMenu() because when you can click it means that the menu is showing
+        menuItems.forEach( function(menuItem) { 
+        menuItem.addEventListener("click", toggleMenu);
+        });
              
-        </script>
+    </script>
     
-</body>
+    </body>
 </html>
