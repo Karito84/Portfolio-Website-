@@ -707,7 +707,7 @@ footer {
     }
 
     .project-links a {
-        margin: 1rem 1rem 2rem 0rem;
+        margin: 1rem 1rem 1rem 0rem;
     }
 
     .skills-container {
@@ -738,6 +738,12 @@ footer {
 }
 
 @media only screen and (max-width: 336px) {
+
+    .project-links a {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
     .contact-content .icon-description {
         font-size: 12px;
     }
