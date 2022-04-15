@@ -87,7 +87,7 @@ nav a {
     font-size: 1.5rem;
     color: hsl(223, 24%, 24%);
     font-weight: 700;
-    transition: color .15s ease-out;
+    transition: color .15s ease-in;
 }
 
 header .mobile-nav {
@@ -493,6 +493,7 @@ nav a {
     text-decoration: none;
     color: hsl(0,0%,96%);
     font-weight: 700;
+    transition: color .2s ease-in;
 }
 
 .contact-options a:hover {
