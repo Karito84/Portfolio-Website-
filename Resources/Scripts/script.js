@@ -14,8 +14,8 @@ const changePicToColor = function() {
     colorPic.style.display = 'block';
 }
 
-colorPic.addEventListener('mouseover', changePicToBlackAndWhite );
-noColorPic.addEventListener('mouseout', changePicToColor);
+colorPic.addEventListener('click', changePicToBlackAndWhite );
+noColorPic.addEventListener('click', changePicToColor);
 
 
 // make the button for Polish words work
