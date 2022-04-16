@@ -295,6 +295,7 @@ nav a {
 
 .button-container button {
     background-color: hsl(223, 24%, 39%);
+    width:13rem;
     padding:1rem 2rem;
     font-size: 1.35rem;
     color: hsl(0,0%,92%);
@@ -310,6 +311,7 @@ nav a {
     background-color: hsl(223, 24%, 24%);
     outline: 1px solid hsl(0,0%,96%);
     outline-offset: -4px;
+    width:13rem;
     
 }
 
@@ -632,7 +634,7 @@ footer {
         align-self: center;
         min-height: 25rem;
     }
-    
+
     .imgs-container figure img {
         height: 100%; 
         width: 100%; 
